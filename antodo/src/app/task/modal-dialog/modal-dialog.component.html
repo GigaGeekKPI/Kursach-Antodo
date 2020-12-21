@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>{{type}} task</h1>
+
+<form novalidate [formGroup]="taskInfoForm">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput type="text" formControlName='title'>
+        <mat-error *ngIf='title.errors?.required'>This field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName='description'></textarea>
+        <mat-error *ngIf='description.errors?.required'>This field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field *ngIf='type === dialogType.EDIT'>
+        <mat-label>Status</mat-label>
+        <mat-select formControlName='status'>
+            <mat-option *ngFor='let status of statuses' [value]="status">{{status}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <button mat-raised-button [disabled]="taskInfoForm.invalid" (click)='saveTask()'>Save</button>
+    <button mat-button color='warn' (click)='closeDialog()'>Cancel</button>
+</form>

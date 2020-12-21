@@ -1,0 +1,41 @@
+<div class="container">
+    <img src="../../../assets/img/undraw_To_do_list_re_9nt7.svg" alt="Get things done">
+    <mat-card>
+        <mat-card-title>Sign up</mat-card-title>
+        <form novalidate [formGroup]="signUpForm">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput type="text" formControlName='name'>
+                <mat-error *ngIf='name.invalid && name.touched'>
+                    <mat-error *ngIf='name.errors.required'>This field is required</mat-error>
+                    <mat-error *ngIf='name.errors.maxlength'>Field length must be less than 12 characters</mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName='password'>
+                <mat-error *ngIf='password.invalid && password.touched'>
+                    <mat-error *ngIf='password.errors.required'>This field is required</mat-error>
+                    <mat-error *ngIf='password.errors.minlength'>Field length must be more than 8 characters</mat-error>
+                    <mat-error *ngIf='password.errors.maxlength'>Field length must be less than 20 characters
+                    </mat-error>
+                    <mat-error *ngIf='password.errors.pattern'>There must be at least 1 letter in uppercase and 1 number
+                    </mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password again</mat-label>
+                <input matInput type="password" formControlName='confirm'>
+                <mat-error *ngIf='confirm.invalid && confirm.touched'>
+                    <mat-error *ngIf='confirm.errors.required'>This field is required</mat-error>
+                </mat-error>
+
+            </mat-form-field>
+            <button mat-raised-button [disabled]="signUpForm.invalid" (click)='onSubmit()'>Sign Up</button>
+        </form>
+        <p>Already have an account ? <a routerLink='../sign-in'>Go to Login</a></p>
+    </mat-card>
+    <img src="../../../assets/img/undraw_stepping_up_g6oo.svg" alt="Work for your objective">
+</div>

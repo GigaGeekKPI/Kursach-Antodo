@@ -1,0 +1,8 @@
+<form [formGroup]='taskFilter'>
+    <app-search formControlName='search'></app-search>
+    <mat-form-field [ngClass]='statusClasses' appearance="none">
+        <mat-select formControlName='status'>
+            <mat-option *ngFor='let status of statuses' [value]="status">{{status}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

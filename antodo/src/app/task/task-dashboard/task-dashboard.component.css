@@ -1,0 +1,103 @@
+.dashboard-container {
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merienda One', cursive;
+    font-size: 2rem;
+    margin-right: 40px;
+}
+
+.main-header {
+    display: flex;
+    background: linear-gradient(90deg, #7492ff 0%, #536DFE 100%);
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container p {
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: 'Merienda One', cursive;
+    color: #536DFE;
+    background-color: white;
+}
+
+.logo {
+    width: 50px;
+    border-radius: 15px;
+}
+
+article {
+    width: 80vw;
+    margin: 0 auto;
+    flex-grow: 1;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+app-task {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-section {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    color: rgb(17, 255, 156);
+}
+
+.add-button {
+    border: 3px dashed rgb(17, 255, 156);
+}
+
+footer {
+    background: linear-gradient(90deg, #5379ff 100%, #425fff 0%);
+    padding: 40px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    font-family: 'Hammersmith One', sans-serif;
+    color: white
+}
+
+.footer-content {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contacts-container {
+    text-align: center;
+}
+
+.contacts-container a, .contacts-container p {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white
+}
+
+h3 {
+    font-family: 'Merienda One', cursive;
+    color: white;
+    font-size: 1.5rem;
+}

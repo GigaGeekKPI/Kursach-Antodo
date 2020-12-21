@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 0;
+    height: 90%;
+    flex-grow: 1;
+}
+
+mat-card {
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card-title {
+    color: #536DFE;
+    margin: 20px 0;
+    font-family: 'Merienda One', cursive;
+}
+
+button {
+    width: fit-content;
+    align-self: center;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #536DFE;
+}
+
+a:visited {
+    color: #536DFE;
+}
+
+img {
+    width: 33%;
+}
+
+img:first-child {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+img:last-child {
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+@media (max-width: 768px) {
+
+    img:first-child {
+        align-self: center;
+        width: 50%;
+    }
+    img:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+
+    img:first-child {
+        display: none;
+    }
+    img:last-child {
+        display: none;
+    }
+}
